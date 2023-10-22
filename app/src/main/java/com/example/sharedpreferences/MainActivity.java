@@ -44,15 +44,22 @@ public class MainActivity extends AppCompatActivity {
 
     public void saveInfo(View v){
         closeKeyboard();
+        String snackbarString = "";
         // get data and create a Student object
-        String nameVal = name.getText().toString();
-        int ageVal =  Integer.parseInt(age.getText().toString());
-        Student student = new Student(nameVal, ageVal);
+        try {
+            String nameVal = name.getText().toString();
+            int ageVal = Integer.parseInt(age.getText().toString());
+            Student student = new Student(nameVal, ageVal);
 
-        // save new student
-        StudentManager.saveStudent(this, student);
+            // save new student
+            StudentManager.saveStudent(this, student);
+            snackbarString = "Info Saved";
+        }
+        catch (Exception e) {
+            snackbarString = "Missing data";
+        }
 
-        Snackbar snackbar = Snackbar.make(v, "Info saved", Snackbar.LENGTH_LONG);
+        Snackbar snackbar = Snackbar.make(v, snackbarString, Snackbar.LENGTH_LONG);
         snackbar.show();
         clearInfo();
 

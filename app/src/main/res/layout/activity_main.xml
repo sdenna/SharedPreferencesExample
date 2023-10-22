@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mainLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity"
+    >
+
+
+    <EditText
+        android:id="@+id/nameEditText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/basicStyle"
+        android:ems="10"
+        android:hint="Name"
+        android:inputType="text"
+        tools:layout_editor_absoluteX="100dp"
+        tools:layout_editor_absoluteY="38dp" />
+
+    <EditText
+        android:id="@+id/ageEditText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/basicStyle"
+        android:ems="10"
+        android:hint="Age"
+        android:inputType="text"
+        tools:layout_editor_absoluteX="100dp"
+        tools:layout_editor_absoluteY="109dp" />
+
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="@dimen/buttonWidth"
+        android:layout_height="wrap_content"
+        style="@style/basicStyle"
+        android:onClick="saveInfo"
+        android:text="Save"
+        tools:layout_editor_absoluteX="45dp"
+        tools:layout_editor_absoluteY="278dp" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="@dimen/buttonWidth"
+        style="@style/basicStyle"
+        android:layout_height="wrap_content"
+        android:onClick="refreshInfo"
+        android:text="Refresh"
+        tools:layout_editor_absoluteX="149dp"
+        tools:layout_editor_absoluteY="278dp" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="@dimen/buttonWidth"
+        android:layout_height="wrap_content"
+        android:onClick="eraseStoredMemory"
+        style="@style/basicStyle"
+        android:text="Erase ALL"
+        tools:layout_editor_absoluteX="267dp"
+        tools:layout_editor_absoluteY="279dp" />
+
+    <TextView
+        android:id="@+id/currentDataTextView"
+        android:layout_width="300dp"
+        android:layout_height="250dp"
+        android:padding="10dp"
+        android:text="Current Data"
+        style="@style/basicStyle"
+        tools:layout_editor_absoluteX="55dp"
+        tools:layout_editor_absoluteY="357dp" />
+</androidx.appcompat.widget.LinearLayoutCompat>

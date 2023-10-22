@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="basicStyle">
+        <item name="android:layout_gravity">center</item>
+        <item name="android:layout_marginTop">@dimen/topMargin</item>
+        <item name="android:padding">@dimen/padding</item>
+
+    </style>
+</resources>
